@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 1,
+        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "nickname": "Healthy Cashew Nuts",
+        "product_code": "12314",
+        "price": 100,
+        "rating": 4.5,
+        "stock": true,
+        "main_img_url": "https://i.ibb.co/5FcjfPQ/product.png"
+      },
+    {
+        "_id": 2,
+        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "nickname": "Healthy Cashew Nuts",
+        "product_code": "12314",
+        "price": 100,
+        "rating": 5,
+        "stock": false,
+        "main_img_url": "https://i.ibb.co/5FcjfPQ/product.png"
+      },
+    {
+        "_id": 2,
+        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "nickname": "Healthy Cashew Nuts",
+        "product_code": "12314",
+        "rating": 5,
+        "price": 100,
+        "stock": true,
+        "main_img_url": "https://i.ibb.co/5FcjfPQ/product.png"
+      }
+]
