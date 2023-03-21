@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-
-import { decrement, increment } from "./CounterSlice";
+import { decrement, increment } from "./counterSlice";
 
 function Counter() {
   // The `state` arg is correctly typed as `RootState` already
@@ -14,8 +11,8 @@ function Counter() {
   return (
     <div className="text-center bg-gray-100 p-32">
       <h1 className="text-3xl font-bold">{count}</h1>
-      <button onClick={() => dispatch(increment)}>Increment</button>
-      <button onClick={() => dispatch(decrement)}>Decrement</button>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
     </div>
   );
 }

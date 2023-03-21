@@ -1,10 +1,13 @@
-import Home from "./pages/Home";
+import { Suspense } from "react";
+import { RouterProvider } from "react-router-dom";
+import ThemeSuspense from "./components/theme/ThemeSuspense";
+import router from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Suspense fallback={<ThemeSuspense />}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
 
