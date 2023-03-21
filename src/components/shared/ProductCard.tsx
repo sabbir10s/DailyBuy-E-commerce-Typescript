@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { SecondaryButton } from "../theme/Button";
-import { useDispatch } from "react-redux";
+// import { SecondaryButton } from "../theme/Button";
+// import { useDispatch } from "react-redux";
 // import { addToCart } from "../../redux/feature/cartSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ type productType = {
 const ProductCard = ({ product }: productType) => {
   const navigate = useNavigate();
   const [wishlist, setWishlist] = useState(false);
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
   //   const handleAddToCart = (product) => {     dispatch(addToCart(product));
   // };
