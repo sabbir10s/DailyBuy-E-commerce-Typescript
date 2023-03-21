@@ -11,8 +11,12 @@ function Counter() {
   return (
     <div className="text-center bg-gray-100 p-32">
       <h1 className="text-3xl font-bold">{count}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button className="bg-green-500 px-8 py-3 m-5" onClick={() => dispatch(increment())}>
+        Increment
+      </button>
+      <button className="bg-red-500 px-8 py-3 m-5" onClick={() => dispatch(decrement())}>
+        Decrement
+      </button>
     </div>
   );
 }
