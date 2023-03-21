@@ -1,18 +1,18 @@
-export const PrimaryButton = ({ title }: any) => {
+export const PrimaryButton = ({ title }) => {
   return (
     <button className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out">
-      {title}
+     {title}
     </button>
   );
 };
-export const FullWidthButton = ({ title }: any) => {
+export const FullWidthButton = ({ title }) => {
   return (
     <button className="w-full py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out">
-      {title}
+     {title}
     </button>
   );
 };
-export const SecondaryButton = ({ title, w, handleAddToCart, product }: any) => {
+export const SecondaryButton = ({ title, w, handleAddToCart, product }) => {
   return (
     <button
       onClick={() => handleAddToCart(product)}

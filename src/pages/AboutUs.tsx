@@ -1,21 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Contact from "../components/screen/Contact";
+import About from "../components/screen/About";
 
-const ContactUs = () => {
+const AboutUs = () => {
   return (
     <div>
       <Helmet>
-        <title>DailyBuy - Contact us </title>
+        <title>DailyBuy - About</title>
         <meta
           charSet="utf-8"
           name="description"
-          content="DailyBuy Contact us Page"
+          content="DailyBuy About Page"
         />
       </Helmet>
-      <Contact />
+      <About />
     </div>
   );
 };
 
-export default ContactUs;
+export default AboutUs;
