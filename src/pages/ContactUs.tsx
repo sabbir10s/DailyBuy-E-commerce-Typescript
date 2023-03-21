@@ -6,8 +6,12 @@ const ContactUs = () => {
   return (
     <div>
       <Helmet>
-        <title>DailyBuy - Contact us</title>
-        <meta charSet="utf-8" name="description" content="DailyBuy Contact us Page" />
+        <title>DailyBuy - Contact us </title>
+        <meta
+          charSet="utf-8"
+          name="description"
+          content="DailyBuy Contact us Page"
+        />
       </Helmet>
       <Contact />
     </div>
