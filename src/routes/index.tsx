@@ -3,22 +3,21 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import AboutUs from "../pages/AboutUs";
 import Error from "../pages/Error";
-// import FAQ from "../pages/FAQ";
-// const Home = lazy(() => import("../pages/Home"));
+import Home from "../pages/Home";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     errorElement: <Error />,
     children: [
-      // {
-      //   index: true,
-      //   element: <Home />,
-      // },
-      // {
-      //   path: "/home",
-      //   element: <Home />,
-      // },
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
       // {
       //   path: "/contact",
       //   element: <ContactUs />,
