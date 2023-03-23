@@ -1,0 +1,7 @@
+.bgImg {
+  background-image: url("../assets/auth/login.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+}

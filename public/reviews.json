@@ -1,0 +1,48 @@
+
+[
+    {
+        "_id": 1,
+        "name": "Rakib Hasan",
+        "email": "rakib@gmail.com",
+        "date": "October 29, 2021",
+        "review_title": "Product is good quality",
+        "rating": 4.5,
+        "comments": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam veniam est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil voluptatum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accusantium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem. Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam soluta eius cupiditate voluptas."
+    },
+    {
+        "_id": 2,
+        "name": "Sakib",
+        "email": "rakib@gmail.com",
+        "date": "October 30, 2021",
+        "review_title": "Best product ever",
+        "rating": 5,
+        "comments": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam veniam est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil voluptatum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accusantium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem. Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam soluta eius cupiditate voluptas."
+    },
+    {
+        "_id": 3,
+        "name": "Sakib",
+        "email": "rakib@gmail.com",
+        "date": "October 30, 2021",
+        "review_title": "Not so good",
+        "rating": 3,
+        "comments": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam veniam est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil voluptatum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accusantium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem. Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam soluta eius cupiditate voluptas."
+    },
+    {
+        "_id": 4,
+        "name": "Rakib Hasan",
+        "email": "rakib@gmail.com",
+        "date": "October 29, 2021",
+        "review_title": "Product is good quality",
+        "rating": 4.5,
+        "comments": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam veniam est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil voluptatum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accusantium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem. Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam soluta eius cupiditate voluptas."
+    },
+    {
+        "_id": 4,
+        "name": "Emon",
+        "email": "rakib@gmail.com",
+        "date": "October 29, 2021",
+        "review_title": "Product is good quality",
+        "rating": 5,
+        "comments": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam veniam est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil voluptatum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accusantium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem. Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam soluta eius cupiditate voluptas."
+    }
+]

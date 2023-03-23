@@ -1,9 +1,9 @@
-import { lazy } from "react";
+// import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layouts/Layout";
-import ContactUs from "../pages/ContactUs";
+import AboutUs from "../pages/AboutUs";
 import Error from "../pages/Error";
-const Home = lazy(() => import("../pages/Home"));
+import Home from "../pages/Home";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,9 +18,13 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+      // {
+      //   path: "/contact",
+      //   element: <ContactUs />,
+      // },
       {
-        path: "/contact",
-        element: <ContactUs />,
+        path: "/about",
+        element: <AboutUs />,
       },
     ],
   },
