@@ -7,7 +7,7 @@ import OfferTimerBanner from "../components/screen/OfferTimerBanner";
 import PosterOffer from "../components/screen/PosterOffer";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
 import ScrollBottom from "../components/shared/ScrollBottom";
-import ScrollCart from "../components/shared/ScrollCart";
+// import ScrollCart from "../components/shared/ScrollCart";
 
 const Home = () => {
   useEffect(() => {
