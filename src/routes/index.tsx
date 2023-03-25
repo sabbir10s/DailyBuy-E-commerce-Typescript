@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout";
 import AboutUs from "../pages/AboutUs";
 import BlogDetails from "../pages/BlogDetails";
 import BlogPage from "../pages/BlogPage";
+import ContactUs from "../pages/ContactUs";
 import Error from "../pages/Error";
 import Home from "../pages/Home";
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
     ],
   },
