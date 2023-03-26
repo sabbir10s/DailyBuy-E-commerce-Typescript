@@ -1,11 +1,11 @@
-import { Product } from "src/models/types";
+// import { Product } from "src/models/types";
 
-type buttonType = {
-  title: string;
-  w?: "full" | undefined;
-  handleAddToCart: (product: Product) => void;
-  product: Product;
-};
+// type buttonType = {
+//   title: string;
+//   w?: "full" | undefined;
+//   handleAddToCart: (product: Product) => void;
+//   product: Product;
+// };
 
 export const PrimaryButton = ({ title }: any) => {
   return (
