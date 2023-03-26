@@ -1,6 +1,6 @@
 import React from "react";
 
-const BreadCamp = ({ first, second, third, four }) => {
+const BreadCamp = ({ first, second, third, four }: any) => {
   return (
     <div>
       <p className="text-[16px] hidden md:block">
