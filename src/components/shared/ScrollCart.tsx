@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { RootState } from "src/redux/app/store";
 
 const ScrollCart = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
