@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Product } from "../../models/types";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import ReactStars from "react-stars";
+import { SecondaryButton } from "../theme/Button";
 
 type ProductCardProps = {
   product: Product;
@@ -57,12 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
           </div>
           <div className="mt-3">
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="rounded-[5px] py-[4px] md:py-[9px] text-[10px] md:text-[14px] relative cursor-pointer border-[1.5px] font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out"
-            >
-              Add to Cart
-            </button>
+            <SecondaryButton handleAddToCart={handleAddToCart} w="full" title="Add to cart" product={product} />
           </div>
         </div>
       </div>
