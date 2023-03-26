@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/big_logo.png";
 import smallLogo from "../../../assets/logo/logo.png";
@@ -15,9 +15,10 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import Bottom from "./Bottom";
 import Sidebar from "./Sidebar";
 import Top from "./Top";
+import { RootState } from "src/redux/app/store";
 
 const MyNav = () => {
-  //   const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
   const [showModal, setShowModal] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -82,7 +83,7 @@ const MyNav = () => {
                 <button className="relative flex items-center" type="button">
                   <RiShoppingBagLine className="text-[24px]" />
                   <span className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
-                    {/* {cartItems.length} */}
+                    {cartItems.length}
                   </span>
                 </button>
               </Link>

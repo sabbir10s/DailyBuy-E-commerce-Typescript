@@ -6,7 +6,8 @@ type buttonType = {
   handleAddToCart: (product: Product) => void;
   product: Product;
 };
-export const PrimaryButton = ({ title }: buttonType) => {
+
+export const PrimaryButton = ({ title }: any) => {
   return (
     <button className="px-[25px] py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out">
       {title}
@@ -23,7 +24,12 @@ export const FullWidthButton = ({ title }: any) => {
     </button>
   );
 };
-export const SecondaryButton = ({ title, w, handleAddToCart, product }: buttonType) => {
+export const SecondaryButton = ({
+  title,
+  w,
+  handleAddToCart,
+  product,
+}: any) => {
   return (
     <button
       onClick={() => handleAddToCart(product)}

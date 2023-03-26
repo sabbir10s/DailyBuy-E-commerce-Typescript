@@ -33,7 +33,7 @@
   },
   {
     "_id": 2,
-    "product_name": "Coffee-Mate Coffee Creamer",
+    "name": "Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -65,7 +65,7 @@
   },
   {
     "_id": 3,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -97,7 +97,7 @@
   },
   {
     "_id": 4,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -129,7 +129,7 @@
   },
   {
     "_id": 5,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -161,7 +161,7 @@
   },
   {
     "_id": 6,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -193,7 +193,7 @@
   },
   {
     "_id": 7,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -225,7 +225,7 @@
   },
   {
     "_id": 8,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -257,7 +257,7 @@
   },
   {
     "_id": 9,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -289,7 +289,7 @@
   },
   {
     "_id": 10,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -321,7 +321,7 @@
   },
   {
     "_id": 11,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -353,7 +353,7 @@
   },
   {
     "_id": 12,
-    "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+    "name": "Nestle Original Coffee-Mate Coffee Creamer",
     "nickname": "Healthy Cashew Nuts",
     "product_code": "12314",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
