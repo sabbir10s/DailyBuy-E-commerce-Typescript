@@ -6,6 +6,7 @@ import BlogDetails from "../pages/BlogDetails";
 import BlogPage from "../pages/BlogPage";
 import ContactUs from "../pages/ContactUs";
 import Error from "../pages/Error";
+import FAQ from "../pages/FAQ";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/faq",
+        element: <FAQ />,
       },
     ],
   },
