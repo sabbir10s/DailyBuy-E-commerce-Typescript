@@ -1,23 +1,8 @@
 import React from "react";
 import { useParams } from "react-router";
+import { BlogProps, BlogType } from "src/models/types";
 import ThemeSuspense from "../../theme/ThemeSuspense";
 import BlogCard from "./BlogCard";
-type blogType = {
-  _id: number;
-  date: string;
-  blog_title: string;
-  img: string;
-  category: string;
-  length: number;
-  blog_details: string;
-  banner_img: string;
-  writer: string;
-  writer_img: string;
-};
-
-type BlogProps = {
-  blogs: blogType[];
-};
 
 const RecentBlog = ({ blogs }: BlogProps) => {
   const { blogId } = useParams<{
@@ -37,7 +22,7 @@ const RecentBlog = ({ blogs }: BlogProps) => {
         Related posts
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-[28px]">
-        {recentBlog.map((blog: blogType) => (
+        {recentBlog.map((blog: BlogType) => (
           <BlogCard blog={blog} />
         ))}
       </div>
