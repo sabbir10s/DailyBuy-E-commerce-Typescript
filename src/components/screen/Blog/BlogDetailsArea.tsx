@@ -5,23 +5,7 @@ import facebook from "../../../assets/icon/social_primary_color_fb.png";
 import twitter from "../../../assets/icon/social_primary_color_tw.png";
 import ThemeSuspense from "../../theme/ThemeSuspense";
 import { useParams } from "react-router";
-
-type blogType = {
-  _id: number;
-  date: string;
-  blog_title: string;
-  img: string;
-  category: string;
-  length: number;
-  blog_details: string;
-  banner_img: string;
-  writer: string;
-  writer_img: string;
-};
-
-type BlogProps = {
-  blogs: blogType[];
-};
+import { BlogProps } from "src/models/types";
 
 const BlogDetailsArea = ({ blogs }: BlogProps) => {
   const { blogId } = useParams<{ blogId: string }>();

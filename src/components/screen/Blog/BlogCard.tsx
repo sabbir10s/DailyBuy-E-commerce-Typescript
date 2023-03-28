@@ -1,16 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-type blogType = {
-  _id: number;
-  date: string;
-  blog_title: string;
-  img: string;
-  category: string;
-};
+import { BlogType } from "src/models/types";
 
 type BlogCardProps = {
-  blog: blogType;
+  blog: BlogType;
 };
 const BlogCard = ({ blog }: BlogCardProps) => {
   const { _id, date, blog_title, img, category } = blog;

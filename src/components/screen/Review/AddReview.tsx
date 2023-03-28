@@ -38,10 +38,17 @@ const AddReview = () => {
             const ratingValue = i + 1;
             return (
               <label key={i}>
-                <input type="radio" name="rating" value={ratingValue} onClick={() => setStarRating(ratingValue)} />
+                <input
+                  type="radio"
+                  name="rating"
+                  value={ratingValue}
+                  onClick={() => setStarRating(ratingValue)}
+                />
                 <FaStar
                   className="cursor-pointer duration-300"
-                  color={ratingValue <= (hover || starRating) ? "#ffc107" : "#e4e5e9"}
+                  color={
+                    ratingValue <= (hover || starRating) ? "#ffc107" : "#e4e5e9"
+                  }
                   size={30}
                   onMouseEnter={() => setHover(ratingValue)}
                   onMouseLeave={() => setHover(null)}
@@ -55,8 +62,8 @@ const AddReview = () => {
             className="border-[1px] border-[#919EAB]/30 focus:outline-primary-600 rounded-[8px] py-[16px] px-[14px] w-full"
             name="comment"
             id="comment"
-            cols="30"
-            rows="5"
+            cols={30}
+            rows={5}
             placeholder="Write comment"
           ></textarea>
         </div>
