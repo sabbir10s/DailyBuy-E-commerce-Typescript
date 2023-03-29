@@ -199,7 +199,7 @@ const ProductDetails = () => {
                       {" "}
                       <Link to="/cart">
                         <button
-                          onClick={() => handleAddToCart(productInfo)}
+                          // onClick={() => handleAddToCart(productInfo)}
                           className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
                         >
                           Add to cart
@@ -209,7 +209,7 @@ const ProductDetails = () => {
                     <div>
                       <Link to="/checkout">
                         <button
-                          onClick={() => handleAddToCart(productInfo)}
+                          // onClick={() => handleAddToCart(productInfo)}
                           className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
                         >
                           Buy Now
