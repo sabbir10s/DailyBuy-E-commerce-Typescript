@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "../../../styles/AddReview.css";
 const AddReview = () => {
-  const [starRating, setStarRating] = useState(null);
+  const [starRating, setStarRating] = useState<number>(0);
   const [hover, setHover] = useState(null);
   return (
     <>
@@ -50,7 +50,7 @@ const AddReview = () => {
                     ratingValue <= (hover || starRating) ? "#ffc107" : "#e4e5e9"
                   }
                   size={30}
-                  onMouseEnter={() => setHover(ratingValue)}
+                  onMouseEnter={() => ratingValue && setStarRating(ratingValue)}
                   onMouseLeave={() => setHover(null)}
                 />
               </label>

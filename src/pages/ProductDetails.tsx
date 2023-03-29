@@ -16,20 +16,20 @@ import { addToCart } from "../redux/feature/cartSlice";
 import { Helmet } from "react-helmet";
 import Reviews from "../components/screen/Review/Reviews";
 import ThemeSuspense from "../components/theme/ThemeSuspense";
-import { CartItem } from "src/models/types";
+import { CartItem, Product } from "src/models/types";
 import Quantity from "src/components/shared/Quantity";
 
 const ProductDetails = () => {
-  const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState<Product[]>([]);
 
-  const { itemId } = useParams();
+  const { itemId } = useParams<{ itemId: string }>();
   const dispatch = useDispatch();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const productInfo = productData.find(
-    (product) => product._id === parseInt(itemId)
+    (product) => product._id === Number(itemId)
   );
   const [activeImg, setActiveImg] = useState(bigImg);
   const [wishlist, setWishlist] = useState(false);
@@ -58,7 +58,7 @@ const ProductDetails = () => {
   }
   const {
     small_img_url,
-    product_name,
+    name,
     price,
     rating,
     review,
@@ -102,7 +102,7 @@ const ProductDetails = () => {
           <div className="col-span-1 lg:col-span-2">
             <div>
               <h2 className=" text-[20px] md:text-[32px] font-semibold">
-                {product_name}
+                {name}
               </h2>
               {/* rating section */}
               <div className="flex items-center justify-between lg:justify-start lg:space-x-8 mt-5 flex-wrap">
@@ -157,9 +157,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
 
-                <div className="block lg:hidden">
-                  <Quantity />
-                </div>
+                <div className="block lg:hidden">{/* <Quantity /> */}</div>
               </div>
 
               <div className="flex flex-col">
@@ -196,9 +194,7 @@ const ProductDetails = () => {
               ==============================*/}
                 <div className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
-                    <div className="hidden lg:block">
-                      <Quantity />
-                    </div>
+                    <div className="hidden lg:block">{/* <Quantity /> */}</div>
                     <div>
                       {" "}
                       <Link to="/cart">

@@ -1,16 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { BlogType } from "src/models/types";
 import BlogCard from "./BlogCard";
 
-type blogType = {
-  _id: number;
-  date: string;
-  blog_title: string;
-  img: string;
-  category: string;
-};
 const Blogs = () => {
-  const [Blogs, setBlogs] = useState<blogType[]>([]);
+  const [Blogs, setBlogs] = useState<BlogType[]>([]);
 
   const fetchData = () => {
     axios
