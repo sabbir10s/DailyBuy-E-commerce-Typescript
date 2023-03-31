@@ -24,16 +24,11 @@ export const FullWidthButton = ({ title }: any) => {
     </button>
   );
 };
-export const SecondaryButton = ({
-  title,
-  w,
-  handleAddToCart,
-  product,
-}: any) => {
+export const SecondaryButton = ({ title, w, handleAddToCart, product }: any) => {
   return (
     <button
       onClick={() => handleAddToCart(product)}
-      className={`rounded-[5px] py-[4px] md:py-[9px] text-[10px] md:text-[14px] relative cursor-pointer border-[1.5px] font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out ${
+      className={`rounded-[5px] py-[4px] md:py-[12px] px-10 text-[10px] md:text-[16px] relative cursor-pointer border-[1.5px] font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out ${
         w === "full" ? "w-full" : ""
       }`}
     >
