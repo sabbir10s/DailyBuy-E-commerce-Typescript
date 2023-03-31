@@ -37,14 +37,14 @@ const cartSlice = createSlice({
         // check if itemIndex is valid
         if (state.cartItems[itemIndex].cartQuantity > 1) {
           state.cartItems[itemIndex].cartQuantity -= 1;
-          toast.info(`Decreased ${action.payload.name} cart quantity`, {
+          toast.info(`decreased cart quantity`, {
             position: "top-right",
           });
         } else if (state.cartItems[itemIndex].cartQuantity === 1) {
           const nextCartItems = state.cartItems.filter((cartItem: Product) => cartItem._id !== action.payload._id);
 
           state.cartItems = nextCartItems;
-          toast.error(`${action.payload.name} removed from cart`, {
+          toast.error(`item removed from cart`, {
             position: "top-right",
           });
         }
@@ -57,7 +57,7 @@ const cartSlice = createSlice({
 
       state.cartItems = nextCartItems;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.error(`${action.payload.name} removed from cart`, {
+      toast.error(`item removed from cart`, {
         position: "top-right",
       });
     },
