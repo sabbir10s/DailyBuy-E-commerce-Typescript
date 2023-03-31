@@ -28,8 +28,8 @@ const BestSales = () => {
     setVisible((prevValue) => prevValue - 4);
   };
 
-  console.log(productData.length);
-  console.log("visible", visible);
+  // console.log(productData.length);
+  // console.log("visible", visible);
   return (
     <>
       <div className=" mt-8 lg:mt-16 container">
