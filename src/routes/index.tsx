@@ -4,6 +4,7 @@ import Cart from "src/pages/Cart";
 import Categories from "src/pages/Categories";
 import Checkout from "src/pages/Checkout";
 import ProductDetails from "src/pages/ProductDetails";
+import Wishlist from "src/pages/Wishlist";
 import Layout from "../layouts/Layout";
 import AboutUs from "../pages/AboutUs";
 import BlogDetails from "../pages/BlogDetails";
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
       {
         path: "/blog/:blogId",
