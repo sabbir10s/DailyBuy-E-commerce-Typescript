@@ -24,7 +24,12 @@ export const FullWidthButton = ({ title }: any) => {
     </button>
   );
 };
-export const SecondaryButton = ({ title, w, handleAddToCart, product }: any) => {
+export const SecondaryButton = ({
+  title,
+  w,
+  handleAddToCart,
+  product,
+}: any) => {
   return (
     <button
       onClick={() => handleAddToCart(product)}

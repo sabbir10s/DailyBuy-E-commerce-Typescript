@@ -3,12 +3,13 @@ import { SecondaryButton } from "../theme/Button";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/feature/cartSlice";
 import { Link } from "react-router-dom";
+import { Product } from "src/models/types";
 
-const Products = ({ product }) => {
+const Products = (product: Product) => {
   const [wishlist, setWishlist] = useState(false);
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: Product) => {
     dispatch(addToCart(product));
   };
   return (
@@ -54,17 +55,25 @@ const Products = ({ product }) => {
             </svg>
           )}
         </div>{" "}
-        <Link to={`/product/${product?.id}`}>
+        <Link to={`/product/${product?._id}`}>
           <div className="w-[300px] mx-auto h-[250px]">
-            <img src={product?.main_img_url} className="w-full h-full object-center object-fill" alt="" />
+            <img
+              src={product?.main_img_url}
+              className="w-full h-full object-center object-fill"
+              alt=""
+            />
           </div>{" "}
         </Link>
-        <Link to={`/product/${product?.id}`}>
+        <Link to={`/product/${product?._id}`}>
           <div className="space-y-3 lg:mt-1">
-            <h3 className="text-black font-semibold text-[12px] md:text-[18px]">{product?.nickname}</h3>
+            <h3 className="text-black font-semibold text-[12px] md:text-[18px]">
+              {product?.nickname}
+            </h3>
             <div className="flex justify-between items-center">
               <p className="space-x-2">
-                <span className="text-primary-600 text-[12px] md:text-[18px] font-semibold">${product?.price}</span>
+                <span className="text-primary-600 text-[12px] md:text-[18px] font-semibold">
+                  ${product?.price}
+                </span>
                 <span className="text-gray-500 text-base text-[11px] md:text-[18px]">
                   <del>${product?.del_price}</del>
                 </span>
@@ -103,13 +112,20 @@ const Products = ({ product }) => {
                     />
                   </svg>
                 </div>
-                <p className="text-gray-500 text-[12px] md:text-[18px]">(4.5)</p>
+                <p className="text-gray-500 text-[12px] md:text-[18px]">
+                  (4.5)
+                </p>
               </div>
             </div>
           </div>
         </Link>
         <div className="mt-3">
-          <SecondaryButton handleAddToCart={handleAddToCart} product={product} title="Add to cart" w="full" />
+          <SecondaryButton
+            handleAddToCart={handleAddToCart}
+            product={product}
+            title="Add to cart"
+            w="full"
+          />
         </div>
       </div>
     </div>
