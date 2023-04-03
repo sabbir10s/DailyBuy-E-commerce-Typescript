@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/big_logo.png";
 import smallLogo from "../../assets/logo/logo.png";
-import Modal from "./Modal";
+import Modal from "./AuthenticationModal";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RootState } from "src/redux/app/store";
 
@@ -21,7 +21,11 @@ const TopSearchBar = () => {
           <div className="flex gap-4 justify-between items-center py-5 ">
             <Link to="/">
               <img className=" hidden lg:block w-[180px]" src={logo} alt="" />
-              <img className="block lg:hidden w-[80px] md:w-[130px] cursor-pointer" src={smallLogo} alt="" />
+              <img
+                className="block lg:hidden w-[80px] md:w-[130px] cursor-pointer"
+                src={smallLogo}
+                alt=""
+              />
             </Link>
             <div className="hidden md:block w-1/2  lg:w-[550px] xl:w-[778px] relative">
               <input
@@ -35,9 +39,18 @@ const TopSearchBar = () => {
             </div>
             <div className="flex gap-6">
               <Link to="/cart">
-                <button type="button" className="bg-secondary-50 w-10 lg:w-12 h-10 lg:h-12 rounded-full relative flex items-center justify-center">
+                <button
+                  type="button"
+                  className="bg-secondary-50 w-10 lg:w-12 h-10 lg:h-12 rounded-full relative flex items-center justify-center"
+                >
                   {" "}
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <g clip-path="url(#clip0_1236_59489)">
                       <path
                         d="M16.4457 19.1654H3.5557C3.31935 19.1654 3.0857 19.1152 2.87024 19.018C2.65478 18.9209 2.46245 18.779 2.30601 18.6019C2.14958 18.4247 2.03261 18.2163 1.96287 17.9905C1.89314 17.7646 1.87223 17.5266 1.90153 17.292L3.33404 5.83203H16.6674L18.0999 17.292C18.1292 17.5266 18.1083 17.7646 18.0385 17.9905C17.9688 18.2163 17.8518 18.4247 17.6954 18.6019C17.539 18.779 17.3466 18.9209 17.1312 19.018C16.9157 19.1152 16.682 19.1654 16.4457 19.1654Z"
@@ -68,7 +81,13 @@ const TopSearchBar = () => {
               <button onClick={() => setShowModal(true)}>
                 <div className="flex items-center space-x-2">
                   <div className="bg-[#F8F8F8] w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center">
-                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      width="18"
+                      height="22"
+                      viewBox="0 0 18 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"

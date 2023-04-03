@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/shared/Footer";
-import MyNav from "../components/shared/Nav/MyNav";
+import Navbar from "src/components/shared/Navbar/Navbar";
 
 const Layout = () => {
   return (
     <div>
       <header>
-        <MyNav />
+        <Navbar />
       </header>
 
       <main>

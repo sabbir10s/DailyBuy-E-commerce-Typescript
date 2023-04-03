@@ -9,7 +9,7 @@ interface Props {
   visible: boolean;
 }
 
-const Modal: React.FC<Props> = ({ onClose, visible }) => {
+const AuthenticationModal: React.FC<Props> = ({ onClose, visible }) => {
   const [path, setPath] = useState("signIn");
   if (!visible) return null;
   return (
@@ -34,4 +34,4 @@ const Modal: React.FC<Props> = ({ onClose, visible }) => {
   );
 };
 
-export default Modal;
+export default AuthenticationModal;

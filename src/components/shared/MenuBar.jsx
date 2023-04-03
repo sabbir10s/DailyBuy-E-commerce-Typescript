@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../screen/Navbar";
+import Navbar from "./Navbar/Navbar";
 import {BiChevronDown} from "react-icons/bi";
 import fruits from '../../assets/icon/categoryGrayIcon.png'
 import meats from '../../assets/icon/categoryGrayIcon (2).png'

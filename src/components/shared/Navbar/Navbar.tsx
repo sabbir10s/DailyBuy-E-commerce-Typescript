@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/big_logo.png";
 import smallLogo from "../../../assets/logo/logo.png";
-import Modal from "../Modal";
+
 import {
   RiShoppingBagLine,
   RiHeartLine,
@@ -12,15 +12,17 @@ import {
 } from "react-icons/ri";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
-import Bottom from "./Bottom";
 import Sidebar from "./Sidebar";
-import Top from "./Top";
+import AuthenticationModal from "../AuthenticationModal";
+import NavTop from "./NavTop";
+import NavBottom from "./NavBottom";
 import { RootState } from "src/redux/app/store";
 
-const MyNav = () => {
+const Navbar = () => {
   const { cartItems } = useSelector((state: RootState) => state.cart);
   const [showModal, setShowModal] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+
   const [showSearch, setShowSearch] = useState(false);
   const handleShowSearch = () => {
     if (showSearch) {
@@ -36,7 +38,7 @@ const MyNav = () => {
 
   return (
     <div>
-      <Top />
+      <NavTop />
       <div className="border border-gray-100/60 fixed lg:static top-0 z-50 bg-white w-full">
         <div className="container ">
           <div className=" grid grid-cols-3 lg:flex justify-between items-center py-5 ">
@@ -115,11 +117,11 @@ const MyNav = () => {
           </button>
         </div>
       )}
-      <Bottom />
-      <Modal onClose={handleOnClose} visible={showModal} />
+      <NavBottom />
+      <AuthenticationModal onClose={handleOnClose} visible={showModal} />
       <Sidebar handleCloseSidebar={handleCloseSidebar} visible={showSidebar} />
     </div>
   );
 };
 
-export default MyNav;
+export default Navbar;

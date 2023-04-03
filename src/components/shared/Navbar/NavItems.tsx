@@ -1,7 +1,7 @@
 import React from "react";
-import ActiveLink from "../../hooks/ActiveLink";
+import ActiveLink from "../../../hooks/ActiveLink";
 
-const Navbar = () => {
+const NavItems = () => {
   return (
     <nav className="hidden lg:block">
       <ul className="flex items-center gap-10 py-3 text-black">
@@ -28,4 +28,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavItems;
