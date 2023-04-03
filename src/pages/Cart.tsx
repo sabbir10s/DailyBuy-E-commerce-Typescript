@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ProductCart from "../components/screen/ProductCart";
+import ProductCart from "src/components/screen/Cart/ProductCart";
 
 const Cart = () => {
   return (
