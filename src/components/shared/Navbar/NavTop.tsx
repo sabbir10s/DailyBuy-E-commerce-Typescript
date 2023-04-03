@@ -8,7 +8,7 @@ const NavTop = () => {
         <div className="flex justify-between items-center">
           <ul className="flex items-center text-xs">
             <li className="txtHover border-r pr-3">
-              <Link to="/orders/1sdfgfsf1454">
+              <Link to="/orders">
                 <span>Order Tracking</span>
               </Link>
             </li>

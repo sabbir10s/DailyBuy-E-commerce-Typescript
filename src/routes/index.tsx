@@ -16,6 +16,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Invoice from "src/components/screen/Invoice";
 import AboutV2 from "src/components/screen/AboutV2";
+import OrderTrack from "src/pages/OrderTrack";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/invoice",
         element: <Invoice />,
+      },
+      {
+        path: "/orders",
+        element: <OrderTrack />,
       },
       {
         path: "/about",
