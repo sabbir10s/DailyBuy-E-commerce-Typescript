@@ -20,7 +20,7 @@ const ProductCart = () => {
         <h2 className=" text-[18px] md:text-[25px] lg:text-[48px] font-semibold mt-[100px] lg:mt-[40px] mb-[15px] lg:mb-[32px]">
           Your Cart
         </h2>
-        {cartItems.length && (
+        {cartItems.length > 0 && (
           <div>
             <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 mt-4">
               <div className=" col-span-3 bg-[#F9FAFB] rounded-[10px] shadow-custom">

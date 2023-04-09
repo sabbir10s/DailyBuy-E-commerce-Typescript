@@ -1,6 +1,11 @@
 import React from "react";
-// import {addToCart, decreaseCart, removeFromCart} from '../../../redux/feature/cartSlice';
+import {
+  addToCart,
+  decreaseCart,
+  removeFromCart,
+} from "../../../redux/feature/cartSlice";
 import { CartItem } from "src/models/types";
+import { useDispatch } from "react-redux";
 
 type CartProps = {
   item: CartItem;
@@ -9,16 +14,16 @@ type CartProps = {
 const CartItems = ({ item }: CartProps) => {
   const { name, main_img_url, price, del_price, cartQuantity } = item;
   const total = price * cartQuantity;
-  //   const dispatch = useDispatch();
-  //   // const handleRemoveItem = (cartItem) => {
-  //     dispatch(removeFromCart(cartItem));
-  // };
-  // const handleDecreaseCart = (cartItem) => {
-  //     dispatch(decreaseCart(cartItem));
-  // };
-  // const handleIncreaseCart = (cartItem) => {
-  //     dispatch(addToCart(cartItem));
-  // };
+  const dispatch = useDispatch();
+  const handleRemoveItem = (cartItem: any) => {
+    dispatch(removeFromCart(cartItem));
+  };
+  const handleDecreaseCart = (cartItem: any) => {
+    dispatch(decreaseCart(cartItem));
+  };
+  const handleIncreaseCart = (cartItem: any) => {
+    dispatch(addToCart(cartItem));
+  };
   return (
     <div>
       <div className="flex justify-between lg:grid  grid-cols-7 lg:gap-2 items-center lg:m-[7px] bg-white">
@@ -49,7 +54,7 @@ const CartItems = ({ item }: CartProps) => {
         <div>
           <div className="flex items-center justify-center">
             <button
-              //   onClick={() => handleDecreaseCart(item)}
+              onClick={() => handleDecreaseCart(item)}
               type="button"
               className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-medium border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75"
             >
@@ -61,7 +66,7 @@ const CartItems = ({ item }: CartProps) => {
             </span>
 
             <button
-              //   onClick={() => handleIncreaseCart(item)}
+              onClick={() => handleIncreaseCart(item)}
               type="button"
               className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-medium border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75"
             >
@@ -73,7 +78,7 @@ const CartItems = ({ item }: CartProps) => {
           $ {total}
         </h2>
         <button
-          //   onClick={() => handleRemoveItem(item)}
+          onClick={() => handleRemoveItem(item)}
           className="lg:mx-auto p-2 lg:p-4"
         >
           {" "}
