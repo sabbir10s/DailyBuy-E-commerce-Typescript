@@ -17,12 +17,13 @@ import AuthenticationModal from "../AuthenticationModal";
 import NavTop from "./NavTop";
 import NavBottom from "./NavBottom";
 import { RootState } from "src/redux/app/store";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 const Navbar = () => {
   const { cartItems } = useSelector((state: RootState) => state.cart);
   const [showModal, setShowModal] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
-
+  const [showCart, setShowCart] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const handleShowSearch = () => {
     if (showSearch) {
@@ -35,7 +36,9 @@ const Navbar = () => {
   const handleCloseSidebar = () => {
     setShowSidebar(false);
   };
-
+  const handleCloseCart = () => {
+    setShowCart(false);
+  };
   return (
     <div>
       <NavTop />
@@ -81,14 +84,16 @@ const Navbar = () => {
                   </span>
                 </button>
               </Link>
-              <Link to="/cart">
-                <button className="relative flex items-center" type="button">
-                  <RiShoppingBagLine className="text-[24px]" />
-                  <span className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
-                    {cartItems.length}
-                  </span>
-                </button>
-              </Link>
+              <button
+                onClick={() => setShowCart(true)}
+                className="relative flex items-center"
+                type="button"
+              >
+                <RiShoppingBagLine className="text-[24px]" />
+                <span className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
+                  {cartItems.length}
+                </span>
+              </button>
               <button
                 className="hidden lg:block"
                 onClick={() => setShowModal(true)}
@@ -120,6 +125,7 @@ const Navbar = () => {
       <NavBottom />
       <AuthenticationModal onClose={handleOnClose} visible={showModal} />
       <Sidebar handleCloseSidebar={handleCloseSidebar} visible={showSidebar} />
+      <ShoppingCart handleCloseCart={handleCloseCart} visible={showCart} />
     </div>
   );
 };

@@ -25,7 +25,9 @@ const AuthenticationModal: React.FC<Props> = ({ onClose, visible }) => {
             </button>
           </div>
           {path === "signIn" && <SignIn setPath={setPath} />}
-          {path === "forgetPassword" && <ForgotPassword setPath={setPath} />}
+          {path === "forgetPassword" && (
+            <ForgotPassword setPath={setPath} onClose={onClose} />
+          )}
           {path === "signUp" && <SignUp setPath={setPath} />}
           {path === "terms" && <TermsCondition setPath={setPath} />}
         </div>

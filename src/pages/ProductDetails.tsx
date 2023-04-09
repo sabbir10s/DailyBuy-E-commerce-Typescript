@@ -20,6 +20,7 @@ import { Product } from "src/models/types";
 // import Quantity from "src/components/shared/Quantity";
 
 const ProductDetails = () => {
+  const [click, setClick] = useState(false);
   const [productData, setProductData] = useState<Product[]>([]);
 
   const { itemId } = useParams<{ itemId: string }>();
@@ -260,10 +261,30 @@ const ProductDetails = () => {
                 {" "}
                 <div className="text-sm leading-relaxed">
                   <p className="hidden lg:block">{full_description}</p>
-                  <p className="block lg:hidden">
-                    {full_description.slice(0, 300)}...
-                    <span className="text-primary-600 font-semibold">More</span>
-                  </p>
+                  <div className="block lg:hidden">
+                    {click && (
+                      <a href="#description">
+                        <span>{full_description}</span>{" "}
+                        <span
+                          onClick={() => setClick(false)}
+                          className="text-primary-600 font-semibold"
+                        >
+                          show less
+                        </span>
+                      </a>
+                    )}
+                    {!click && (
+                      <div>
+                        <span>{full_description.slice(0, 300)}...</span>
+                        <span
+                          onClick={() => setClick(true)}
+                          className="text-primary-600 font-semibold inline"
+                        >
+                          More
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div className="hidden lg:block">
                   <h3 className="text-2xl font-semibold mt-5 mb-3">
