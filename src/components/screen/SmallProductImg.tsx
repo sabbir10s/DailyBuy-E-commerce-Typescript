@@ -19,16 +19,14 @@ const SmallProductImg: React.FC<Props> = ({ setActiveImg, small_img_url }) => {
     <div>
       <Slider {...settings}>
         {small_img_url.map((img_url, idx) => (
-          <>
-            <div key={idx} className=" px-2 border-r border-gray-100">
-              <img
-                onClick={() => setActiveImg(img_url)}
-                className="w-full h-full object-center object-fill rounded-2xl"
-                src={img_url}
-                alt=""
-              />
-            </div>
-          </>
+          <div key={idx} className=" px-2 border-r border-gray-100">
+            <img
+              onClick={() => setActiveImg(img_url)}
+              className="w-full h-full object-center object-fill rounded-2xl"
+              src={img_url}
+              alt=""
+            />
+          </div>
         ))}
         <div className=" px-2">
           <img

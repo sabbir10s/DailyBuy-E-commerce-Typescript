@@ -1,36 +1,48 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { RootState } from "src/redux/app/store";
 
 const InvoiceTable = () => {
-  const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
 
-  const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
+  const total = cartItems.reduce(
+    (total, item) => total + item.price * item.cartQuantity,
+    0
+  );
+  console.log(cartItems);
   const shipping = 3;
   return (
     <div className="container my-[64px]">
       <div className="border-t-[1px] border-r-[1px] rounded-t-[10px] rounded-bl-[10px]">
-        <div className="grid grid-cols-5 justify-items-center font-semibold border-l">
-          <div className="py-[19px]">Serial No</div>
-          <div className="py-[19px]">Product Name</div>
-          <div className="py-[19px]">Quantity</div>
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center font-semibold border-l">
+          <div className="py-[19px] hidden lg:block">Serial No</div>
+          <div className="py-[19px] p-2">Product Name</div>
+          <div className="py-[19px] hidden lg:block">Quantity</div>
           <div className="py-[19px]">Item Price</div>
           <div className="py-[19px]">Amount</div>
         </div>
         {cartItems.map((order, index) => (
-            <>
-            <div key={index} className="grid grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
-              <div className="py-[19px]">{index + 1}</div>
-              <div className="py-[19px]">{order.product_name.slice(0, 25)}....</div>
-              <div className="py-[19px]">{order.cartQuantity}</div>
+          <>
+            <div
+              key={index}
+              className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l"
+            >
+              <div className="py-[19px] hidden lg:block">{index + 1}</div>
+              <div className="py-[19px] p-2">{order.name.slice(0, 15)}....</div>
+              <div className="py-[19px] hidden lg:block">
+                {order.cartQuantity}
+              </div>
               <div className="py-[19px]">${order.price}</div>
-              <div className="py-[19px]">${order.cartQuantity * order.price}</div>
+              <div className="py-[19px]">
+                ${order.cartQuantity * order.price}
+              </div>
             </div>
-            </>
+          </>
         ))}
         {/*  */}
-        <div className="grid grid-cols-5 justify-items-center border-t">
-          <div className="py-[19px]"></div>
-          <div className="py-[19px]"></div>
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center border-t">
+          <div className="py-[19px] hidden lg:block"></div>
+          <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px]"></div>
           <div className="py-[19px] w-full border-l border-b text-center">
             <p>Subtotal</p>
@@ -40,9 +52,9 @@ const InvoiceTable = () => {
           </div>
         </div>
         {/*  */}
-        <div className="grid grid-cols-5 justify-items-center">
-          <div className="py-[19px]"></div>
-          <div className="py-[19px]"></div>
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center">
+          <div className="py-[19px] hidden lg:block"></div>
+          <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px]"></div>
           <div className="py-[19px] w-full border-l border-b text-center">
             <p>Shopping Cost</p>
@@ -52,9 +64,9 @@ const InvoiceTable = () => {
           </div>
         </div>{" "}
         {/*  */}
-        <div className="grid grid-cols-5 justify-items-center">
-          <div className="py-[19px]"></div>
-          <div className="py-[19px]"></div>
+        <div className="grid grid-cols-3 lg:grid-cols-5 justify-items-center">
+          <div className="py-[19px] hidden lg:block"></div>
+          <div className="py-[19px] hidden lg:block"></div>
           <div className="py-[19px]"></div>
           <div className="py-[19px] w-full border-l border-b text-center">
             <p>Total Cost</p>
@@ -64,8 +76,11 @@ const InvoiceTable = () => {
           </div>
         </div>
       </div>
-      <div className="mt-20 text-end">
-        <button className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom">
+      <div className="mt-8 lg:mt-20 text-end">
+        <button
+          onClick={() => window.print()}
+          className="bg-primary-500 cursor-pointer hover:bg-primary-700 transition duration-300 space-x-2 text-white py-2 px-4 rounded shadow-custom"
+        >
           <span>Print invoice</span>{" "}
           <span>
             <svg

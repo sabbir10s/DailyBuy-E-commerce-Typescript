@@ -19,7 +19,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleAddToCart = (product: Product) => {
     dispatch(addToCart(product));
   };
-  const { _id, nickname, price, discount, main_img_url, del_price, rating } = product;
+  const {
+    _id,
+    nickname,
+    price,
+    discount,
+    main_img_url,
+    del_price,
+    rating,
+    stock,
+  } = product;
   const handleProductDetails = (_id: number) => {
     navigate(`/product/${_id}`);
   };
@@ -30,7 +39,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           onClick={() => setWishlist(!wishlist)}
           className="bg-white hidden md:inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-2 right-3 hover:scale-110 duration-300 transition"
         >
-          {!wishlist && <AiOutlineHeart className="text-[#999999]/40 text-3xl" />}
+          {!wishlist && (
+            <AiOutlineHeart className="text-[#999999]/40 text-3xl" />
+          )}
           {wishlist && <AiFillHeart className="text-[#FF5555] text-3xl" />}
         </div>
         <div>
@@ -38,27 +49,61 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <p>{discount}% OFF</p>
           </div>
 
-          <div onClick={() => handleProductDetails(_id)} className="md:w-[300px] mx-auto">
-            <img src={main_img_url} className="w-full h-full object-center object-fill" alt="" />
+          <div
+            onClick={() => handleProductDetails(_id)}
+            className="md:w-[300px] mx-auto"
+          >
+            <img
+              src={main_img_url}
+              className="w-full h-full object-center object-fill"
+              alt=""
+            />
           </div>
-          <div onClick={() => handleProductDetails(_id)} className="space-y-3 lg:mt-1">
-            <h3 className="text-black font-semibold text-[12px] md:text-[18px]">{nickname}</h3>
+          <div
+            onClick={() => handleProductDetails(_id)}
+            className="space-y-3 lg:mt-1"
+          >
+            <h3 className="text-black font-semibold text-[12px] md:text-[18px]">
+              {nickname}
+            </h3>
             <div className="flex justify-between items-center">
               <p className="flex items-center gap-1 md:gap-3">
-                <span className="text-primary-600 text-[12px] md:text-[18px] font-semibold">${price}</span>
+                <span className="text-primary-600 text-[12px] md:text-[18px] font-semibold">
+                  ${price}
+                </span>
                 <span className="text-gray-500 text-[10px] md:text-[18px]">
                   <del>${del_price}</del>
                 </span>
               </p>
               <div className="flex gap-1 items-center">
-                <ReactStars className="block md:hidden" count={5} size={8} value={rating} edit={false}></ReactStars>
-                <ReactStars className="hidden md:block" count={5} size={20} value={rating} edit={false}></ReactStars>
-                <p className="text-gray-500 text-[12px] md:text-[18px]">({rating})</p>
+                <ReactStars
+                  className="block md:hidden"
+                  count={5}
+                  size={8}
+                  value={rating}
+                  edit={false}
+                ></ReactStars>
+                <ReactStars
+                  className="hidden md:block"
+                  count={5}
+                  size={20}
+                  value={rating}
+                  edit={false}
+                ></ReactStars>
+                <p className="text-gray-500 text-[12px] md:text-[18px]">
+                  ({rating})
+                </p>
               </div>
             </div>
           </div>
           <div className="mt-3">
-            <SecondaryButton handleAddToCart={handleAddToCart} w="full" title="Add to cart" product={product} />
+            <SecondaryButton
+              stock={stock}
+              handleAddToCart={handleAddToCart}
+              product={product}
+              title="Add to cart"
+              w="full"
+            />
           </div>
         </div>
       </div>

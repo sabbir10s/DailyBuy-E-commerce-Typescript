@@ -1,13 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FullWidthButton } from "../../theme/Button";
 import "../../../styles/SignSignUp.css";
 
-interface Props {
-  setPath: Dispatch<SetStateAction<string>>;
-}
-
-const ForgotPassword: React.FC<Props> = ({ setPath }) => {
+const ForgotPassword = ({ setPath, onClose }: any) => {
   const [newPassword, setNewPassword] = useState<boolean>(false);
   return (
     <div>
@@ -25,6 +21,7 @@ const ForgotPassword: React.FC<Props> = ({ setPath }) => {
             {!newPassword && (
               <div className="text-center">
                 <input
+                  required={true}
                   className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border"
                   type="email"
                   placeholder="Email"
@@ -34,6 +31,7 @@ const ForgotPassword: React.FC<Props> = ({ setPath }) => {
             {newPassword && (
               <div className="text-center">
                 <input
+                  required={true}
                   className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"
                   type="password"
                   placeholder="Password"
@@ -43,6 +41,7 @@ const ForgotPassword: React.FC<Props> = ({ setPath }) => {
             {newPassword && (
               <div className=" text-center">
                 <input
+                  required={true}
                   className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"
                   type="password"
                   placeholder="Confirm Password"
@@ -51,23 +50,17 @@ const ForgotPassword: React.FC<Props> = ({ setPath }) => {
             )}
             <div className="text-center pb-10">
               {newPassword ? (
+                <Link to="/profile" onClick={onClose}>
+                  <FullWidthButton title="Reset Password" />
+                </Link>
+              ) : (
                 <button
                   type="submit"
-                  className="w-full text-xl py-2.5 relative rounded group font-medium text-white inline-block"
-                >
-                  <Link to="/signIn">
-                    <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                    <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                    <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                    <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                    <span className="relative">Reset Password</span>
-                  </Link>
-                </button>
-              ) : (
-                <FullWidthButton
                   onClick={() => setNewPassword(true)}
-                  title="Forget Password"
-                />
+                  className="w-full py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out"
+                >
+                  Forget Password
+                </button>
               )}
               <div className="mt-8">
                 <span>Already have account?</span>{" "}

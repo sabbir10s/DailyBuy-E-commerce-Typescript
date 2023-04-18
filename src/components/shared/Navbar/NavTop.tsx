@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Top = () => {
+const NavTop = () => {
   return (
     <div className="hidden bg-white lg:block">
       <div className="container py-2 ">
         <div className="flex justify-between items-center">
           <ul className="flex items-center text-xs">
             <li className="txtHover border-r pr-3">
-              <Link to="/orders/1sdfgfsf1454">
+              <Link to="/orders">
                 <span>Order Tracking</span>
               </Link>
             </li>
@@ -47,4 +47,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default NavTop;

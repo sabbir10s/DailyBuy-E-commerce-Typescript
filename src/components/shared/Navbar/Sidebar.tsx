@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ActiveLink from "../../../hooks/ActiveLink";
 import { RiHeartLine, RiUser3Line } from "react-icons/ri";
-import Modal from "../Modal";
+import Modal from "../AuthenticationModal";
 import { Link } from "react-router-dom";
 
 interface Props {

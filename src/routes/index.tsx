@@ -14,6 +14,9 @@ import Error from "../pages/Error";
 import FAQ from "../pages/FAQ";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
+import Invoice from "src/components/screen/Invoice";
+import AboutV2 from "src/components/screen/AboutV2";
+import OrderTrack from "src/pages/OrderTrack";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,8 +60,20 @@ const router = createBrowserRouter([
         element: <BlogDetails />,
       },
       {
+        path: "/invoice",
+        element: <Invoice />,
+      },
+      {
+        path: "/orders",
+        element: <OrderTrack />,
+      },
+      {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/aboutV2",
+        element: <AboutV2 />,
       },
       {
         path: "/contact",

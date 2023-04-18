@@ -275,7 +275,7 @@ const Checkout = () => {
                         ${total + shipping}.00
                       </p>
                     </div>
-                    <Link className="block mt-[20px]" to="/orders/12651564asdf">
+                    <Link className="block mt-[20px]" to="/orders">
                       <FullWidthButton title="Place Order" />
                     </Link>{" "}
                   </div>
