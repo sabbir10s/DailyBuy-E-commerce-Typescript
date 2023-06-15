@@ -37,7 +37,7 @@ const NavBottom = () => {
             <span>Categories</span>
             <BiChevronDown className="text-[25px]" />
           </li>
-          <div className="shadow-custom opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white hidden lg:block rounded-b-md absolute top-12 left-0 w-full transition duration-300 delay-100 ease-in-out">
+          <div className=" z-10 shadow-custom opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white hidden lg:block rounded-b-md absolute top-12 left-0 w-full transition duration-300 delay-100 ease-in-out">
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">
               <Link className="flex items-center gap-[8px]" to="/categories">
                 <img className="w-[25px]" src={fruits} alt="" />
