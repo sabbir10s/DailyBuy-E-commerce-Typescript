@@ -1,12 +1,17 @@
 import React from "react";
 import Map from "./Map";
-import "../../styles/backgroundImg.css";
 import { FullWidthButton } from "../theme/Button";
+import bgImg from "../../assets/contact/banner.jpg";
 const Contact = () => {
   return (
     <div>
-      <div className="text-center h-[300px] contactBanner mt-12 ">
-        <div className=" bg-primary-700/80 w-full h-full flex items-center justify-center text-white">
+      <div className="text-center h-[300px] mt-12 relative ">
+        <img
+          className=" z-0 absolute bottom-0 w-full h-full object-cover object-center"
+          src={bgImg}
+          alt=""
+        />
+        <div className=" z-[2] absolute bg-primary-700/80 w-full h-full flex items-center justify-center text-white">
           <div>
             <h1 className="text-[20px] md:text-[25px] lg:text-[32px] font-bold">
               Feel free contract with us
