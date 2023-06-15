@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import "../../../styles/SignSignUp.css";
+import bgImg from "../../../assets/auth/login.png";
 import { FullWidthButton } from "../../theme/Button";
 import Checkbox from "../../theme/Checkbox";
 
@@ -8,9 +8,15 @@ interface Props {
 }
 const SignUp: React.FC<Props> = ({ setPath }) => {
   return (
-    <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center w-full">
-        <div className=" w-[400px] lg:w-[470px] h-full hidden md:block bgImg"></div>
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center h-[85vh] w-full">
+        <div className="relative w-[400px] lg:w-[470px] h-full hidden md:block">
+          <img
+            className="absolute bottom-0 w-full h-full object-cover object-center"
+            src={bgImg}
+            alt=""
+          />
+        </div>
         <div className="w-full p-4">
           <h2 className="text-2xl font-semibold text-center mb-10">SignUp</h2>
           <form
@@ -24,7 +30,7 @@ const SignUp: React.FC<Props> = ({ setPath }) => {
                 type="text"
                 placeholder="Full Name"
               />
-            </div>{" "}
+            </div>
             <div className="text-center">
               <input
                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
@@ -38,21 +44,20 @@ const SignUp: React.FC<Props> = ({ setPath }) => {
                 type="password"
                 placeholder="Password"
               />
-            </div>{" "}
+            </div>
             <div className=" text-center">
               <input
                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
                 type="password"
                 placeholder="Confirm Password"
               />
-            </div>{" "}
+            </div>
             <div className="flex items-center">
               <span className="-mt-2">
-                {" "}
                 <Checkbox />
               </span>
               <div className="flex items-center gap-1">
-                <p>I agree to </p>
+                <p>I agree to</p>
                 <button
                   onClick={() => setPath("terms")}
                   className="text-primary-600 font-bold hover:underline cursor-pointer"
@@ -64,7 +69,7 @@ const SignUp: React.FC<Props> = ({ setPath }) => {
             <div className="text-center">
               <FullWidthButton title="Create Account" />
               <div className="mt-6">
-                <span>Already have account?</span>{" "}
+                <span>Already have account?</span>
                 <span>
                   <button
                     onClick={() => setPath("signIn")}
